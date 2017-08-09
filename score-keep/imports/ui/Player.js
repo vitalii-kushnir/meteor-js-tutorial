@@ -24,13 +24,23 @@ export default class Player extends React.Component {
     }
 
     render() {
+        const itemClassName = `item item--position-${this.props.player.rank}`;
         return (
-            <p>
-                {this.props.player.name} has {this.props.player.score} point(s)
-                <button onClick={this.incrementHandler.bind(this)}>+1</button>
-                <button onClick={this.decrementHandler.bind(this)}>-1</button>
-                <button onClick={this.deleteHandler.bind(this)}>x</button>
-            </p>
+            <div className={itemClassName}>
+                <div className="player">
+                    <div>
+                        <h3 className="player__name">{this.props.player.name}</h3>
+                        <p className="player__stats">
+                            {this.props.player.position} place - {this.props.player.score} point(s)
+                        </p>
+                    </div>
+                    <div className="player__actions">
+                        <button className="button button--round" onClick={this.incrementHandler.bind(this)}>+1</button>
+                        <button className="button button--round" onClick={this.decrementHandler.bind(this)}>-1</button>
+                        <button className="button button--round" onClick={this.deleteHandler.bind(this)}>x</button>
+                    </div>
+                </div>
+            </div>
         )
     }
 }
