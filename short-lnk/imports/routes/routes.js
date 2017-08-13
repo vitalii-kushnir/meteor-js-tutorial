@@ -3,7 +3,7 @@ import React from 'react';
 import {Router, Route, browserHistory} from 'react-router';
 
 import Signup from './../ui/Signup'
-import Link from './../ui/Link'
+import Link from './../ui/LinkPage'
 import NotFound from './../ui/NotFound'
 import Login from './../ui/Login'
 
