@@ -13,7 +13,6 @@ export const NoteList = (props) => {
         <div className="item-list">
             <NoteListHeader/>
             {props.notes.length === 0 ? <NoteListEmptyItem/> : undefined }
-            Note list {props.notes.length}
             {props.notes.map((note) => {
                 return <NoteListItem key={note._id} note={note}/>
             })}
