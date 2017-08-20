@@ -1,4 +1,7 @@
 @import "./variables";
+@import "./mixins/media-query-mixin";
+
+
 @import "./base";
 
 @import "./components/boxed-view";

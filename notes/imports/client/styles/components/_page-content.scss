@@ -4,15 +4,30 @@
   max-width: $site-max-width;
   margin: 0 auto;
   padding: $large-space $space;
+
+  @include desctop() {
+    padding: $large-space $space;
+  }
 }
 
 .page-content__sidebar {
   width: $page-content-sidebar-width;
-  display: flex;
+  display: none;
+  //display: flex;
   padding-right: $large-space;
+
+  @include desctop() {
+    display: flex;
+  }
 }
 
 .page-content__main {
   display: flex;
-  width: $page-content-main-width;
+  width: 100%;
+
+  @include desctop() {
+    width: $page-content-main-width;
+  }
+
 }
+
