@@ -11,14 +11,28 @@
 }
 
 .page-content__sidebar {
-  width: $page-content-sidebar-width;
-  display: none;
-  //display: flex;
-  padding-right: $large-space;
+  display: flex;
+  width: 100vw;
+  transition: left .3s ease;
+
+  position: fixed;
+  top: $header-height;
+  left: -100vw;
+  bottom: 0;
+  z-index: 1;
+
+  -webkit-overflow-scrolling: touch;
 
   @include desctop() {
     display: flex;
+    width: $page-content-sidebar-width;
+    padding-right: $large-space;
+    position: static;
   }
+}
+
+.is-nav-open .page-content__sidebar {
+  left: 0;
 }
 
 .page-content__main {
